@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>수강 신청 : 강의 목록</title>
+  <link th:href="@{/style/app.css}" rel="stylesheet">
+  <link th:href="@{/style/layout/headerUser.css}" rel="stylesheet">
+  <link th:href="@{/style/layer/courseSearchLayer.css}" rel="stylesheet">
+  <link th:href="@{/style/page/courseRegistrationCart.css}" rel="stylesheet">
+<!--  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js}"></script>-->
+  <script th:src="@{/script/plugin/axios-0.9.1.js}"></script>
+  <script th:src="@{/script/app.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/api.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/route.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/layer/userUtils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/layer/courseSearchUtils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/courseRegistrationCart.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/headerUser :: headerUser(title='수강 신청 (예비 수강 신청)')}"/>
+  <div class="content">
+    <!-- 강의 검색 영역 -->
+    <th:block th:replace="~{/layer/courseSearchLayer :: courseSearchLayer}"/>
+    <!-- 강의 검색 결과 영역 -->
+    <th:block th:replace="~{/layer/courseSearchResultLayer :: courseSearchResultLayer(pageType = 'courseRegistrationCartPage')}"/>
+    <!-- 수강 신청 사용자 영역 -->
+    <th:block th:replace="~{/layer/courseRegistrationUserLayer :: courseRegistrationUserLayer}"/>
+    <!-- 예비 수강 신청 결과 영역 -->
+    <th:block th:replace="~{/layer/courseRegistrationCartResultLayer :: courseRegistrationCartResultLayer(pageType = 'courseRegistrationCartPage')}"/>
+  </div>
+</div>
+</body>
+
+</html>

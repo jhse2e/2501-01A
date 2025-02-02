@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>수강 신청 : 강의 목록</title>
+  <link th:href="@{/style/app.css}" rel="stylesheet">
+  <link th:href="@{/style/layout/headerUser.css}" rel="stylesheet">
+  <link th:href="@{/style/layer/courseSearchLayer.css}" rel="stylesheet">
+  <link th:href="@{/style/layer/courseRegistrationModalLayer.css}" rel="stylesheet">
+  <link th:href="@{/style/page/courseRegistration.css}" rel="stylesheet">
+<!--  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js}"></script>-->
+<!--  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js}"></script>-->
+<!--  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js}"></script>-->
+  <script th:src="@{/script/plugin/axios-0.9.1.js}"></script>
+  <script th:src="@{/script/plugin/sock-client-1.4.0.js}"></script>
+  <script th:src="@{/script/plugin/stomp-2.3.3.js}"></script>
+  <script th:src="@{/script/app.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/api.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/route.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/layer/userUtils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/layer/courseSearchUtils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/courseRegistration.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/headerUser :: headerUser(title='수강 신청 (수강 신청)')}"/>
+  <div class="content">
+    <!-- 강의 검색 영역 -->
+    <th:block th:replace="~{/layer/courseSearchLayer :: courseSearchLayer}"/>
+    <!-- 강의 검색 결과 영역 -->
+    <th:block th:replace="~{/layer/courseSearchResultLayer :: courseSearchResultLayer (pageType = 'courseRegistrationPage')}"/>
+    <!-- 수강 신청 사용자 영역 -->
+    <th:block th:replace="~{/layer/courseRegistrationUserLayer :: courseRegistrationUserLayer}"/>
+    <!-- 수강 신청 결과 영역 -->
+    <th:block th:replace="~{/layer/courseRegistrationResultLayer :: courseRegistrationResultLayer}"/>
+    <!-- 예비 수강 신청 결과 영역 -->
+    <th:block th:replace="~{/layer/courseRegistrationCartResultLayer :: courseRegistrationCartResultLayer(pageType = 'courseRegistrationPage')}"/>
+  </div>
+  <th:block th:replace="~{/page/courseRegistration/layer/courseRegistrationModalLayer :: courseRegistrationModalLayer}"/>
+</div>
+</body>
+
+</html>

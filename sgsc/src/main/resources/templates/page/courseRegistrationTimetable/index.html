@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>수강 신청 : 내 시간표</title>
+  <link th:href="@{/style/app.css}" rel="stylesheet">
+  <link th:href="@{/style/layout/headerUser.css}" rel="stylesheet">
+  <link th:href="@{/style/page/courseRegistrationTimetable.css}" rel="stylesheet">
+<!--  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js}"></script>-->
+  <script th:src="@{/script/plugin/axios-0.9.1.js}"></script>
+  <script th:src="@{/script/app.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/api.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/route.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/layer/userUtils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/courseRegistrationTimetable.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/headerUser :: headerUser(title='수강 신청 (내 시간표)')}"/>
+  <div class="content">
+    <table class="table">
+      <tbody class="tbody">
+        <tr class="tr">
+          <th class="th"></th>
+          <th class="th">월</th>
+          <th class="th">화</th>
+          <th class="th">수</th>
+          <th class="th">목</th>
+          <th class="th">금</th>
+          <th class="th">토</th>
+          <th class="th">일</th>
+        </tr>
+        <tr class="tr">
+          <th class="th">1교시<br>09:00~09:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">2교시<br>09:30~10:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">3교시<br>10:00~10:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">4교시<br>10:30~11:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">5교시<br>11:00~11:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">6교시<br>11:30~12:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">7교시<br>12:00~12:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">8교시<br>12:30~13:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">9교시<br>13:00~13:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">10교시<br>13:30~14:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">11교시<br>14:00~14:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">12교시<br>14:30~15:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">13교시<br>15:00~15:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">14교시<br>15:30~16:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">15교시<br>16:00~16:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">16교시<br>16:30~17:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">17교시<br>17:00~17:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">18교시<br>17:30~18:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">19교시<br>18:00~18:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">20교시<br>18:30~19:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">21교시<br>19:00~19:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">22교시<br>19:30~20:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">23교시<br>20:00~20:30</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+        <tr class="tr">
+          <th class="th">24교시<br>20:30~21:00</th>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+          <td class="td"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+
+</html>

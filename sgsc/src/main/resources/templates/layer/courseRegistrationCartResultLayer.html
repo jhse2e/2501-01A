@@ -1,0 +1,49 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 예비 수강 신청 결과 영역 (pageType 변수로 템플릿 재사용) -->
+<th:block th:fragment="courseRegistrationCartResultLayer">
+  <div class="course-registration-cart-details">
+    <div class="course-registration-cart-details-title">
+      <span class="course-registration-cart-details-title-text">예비 수강 신청 결과</span>
+    </div>
+    <div class="course-registration-cart-details-content">
+      <table class="table course-registration-cart-details-table">
+        <thead class="thead course-registration-cart-details-table-header">
+        <th:block th:if="${pageType == 'courseRegistrationPage'}">
+          <tr class="tr">
+            <th class="th">대학명</th>
+            <th class="th">학부명</th>
+            <th class="th">학과명</th>
+            <th class="th">과목명</th>
+            <th class="th">구분</th>
+            <th class="th">학점</th>
+            <th class="th">강의번호</th>
+            <th class="th">강의시간</th>
+            <th class="th">수강정원</th>
+            <th class="th">수강신청인원</th>
+            <th class="th">수강신청</th>
+          </tr>
+        </th:block>
+        <th:block th:if="${pageType == 'courseRegistrationCartPage'}">
+          <tr class="tr">
+            <th class="th">대학명</th>
+            <th class="th">학부명</th>
+            <th class="th">학과명</th>
+            <th class="th">과목명</th>
+            <th class="th">구분</th>
+            <th class="th">학점</th>
+            <th class="th">강의번호</th>
+            <th class="th">강의시간</th>
+            <th class="th">수강정원</th>
+            <th class="th">예비수강신청인원</th>
+            <th class="th">예비수강신청</th>
+          </tr>
+        </th:block>
+        </thead>
+        <tbody class="tbody course-registration-cart-details-table-content"></tbody>
+      </table>
+    </div>
+  </div>
+</th:block>
+
+</html>

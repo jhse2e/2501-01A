@@ -1,0 +1,113 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 강의 검색 영역 -->
+<th:block th:fragment="courseSearchLayer">
+  <div class="course-search">
+    <div class="course-search-title">
+      <span class="course-search-title-text">강의 검색</span>
+    </div>
+    <div class="course-search-content">
+      <div class="course-search-info">
+        <div class="course-search-select">
+          <div class="course-select-title">
+            <span class="course-select-title-text">개설 연도 (*)</span>
+          </div>
+          <div class="course-select-content">
+            <label class="course-select-label">
+              <select class="select course-year-select">
+                <option class="select-option" value="">선택</option>
+                <option class="select-option" value="2024" selected>2024</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="course-search-select">
+          <div class="course-select-title">
+            <span class="course-select-title-text">개설 학기 (*)</span>
+          </div>
+          <div class="course-select-content">
+            <label class="course-select-label">
+              <select class="select course-semester-select">
+                <option class="select-option" value="">선택</option>
+                <option class="select-option" value="1" selected>1학기</option>
+                <option class="select-option" value="2">2학기</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="course-search-info-guide">
+        <span class="text"><span class="text-essential">개설 연도</span>, <span class="text-essential">개설 학기</span>는 필수 선택하세요.</span>
+      </div>
+      <div class="course-search-info">
+        <div class="course-search-select">
+          <div class="course-select-title">
+            <span class="course-select-title-text">강의 구분 (*)</span>
+          </div>
+          <div class="course-select-content">
+            <label class="course-select-label">
+              <select class="select course-type-select">
+                <option class="select-option" value="" selected>선택</option>
+                <option class="select-option" value="교양">교양</option>
+                <option class="select-option" value="교직">교직</option>
+                <option class="select-option" value="전공">전공</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="course-search-select">
+          <div class="course-select-title">
+            <span class="course-select-title-text">담당 대학 (*)</span>
+          </div>
+          <div class="course-select-content">
+            <label class="course-select-label">
+              <select class="select college-select">
+                <option class="select-option" value="" selected>선택</option>
+                <option class="select-option" value="1">교양대학</option>
+                <option class="select-option" value="2">인문대학</option>
+                <option class="select-option" value="3">경영대학</option>
+                <option class="select-option" value="4">사회과학대학</option>
+                <option class="select-option" value="5">소프트웨어대학</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="course-search-info">
+        <div class="course-search-select">
+          <div class="course-select-title">
+            <span class="course-select-title-text">담당 학부</span>
+          </div>
+          <div class="course-select-content">
+            <label class="course-select-label">
+              <select class="select college-division-select">
+                <option class="select-option" value="" selected>-</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="course-search-select">
+          <div class="course-select-title">
+            <span class="course-select-title-text">담당 학과</span>
+          </div>
+          <div class="course-select-content">
+            <label class="course-select-label">
+              <select class="select college-department-select">
+                <option class="select-option" value="" selected>-</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="course-search-info-guide">
+        <span class="text"><span class="text-essential">강의 구분</span>, <span class="text-essential">담당 대학</span>은 필수 선택하세요.</span>
+      </div>
+      <div class="course-search-button">
+        <button class="button search-button" type="button">선택 검색</button>
+        <button class="button search-clear-button" type="button">다시 선택</button>
+      </div>
+    </div>
+  </div>
+</th:block>
+
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.table .tbody .th {
+  width: 100px;
+}
+.table .th {
+  font-weight: 600;
+  background-color: var(--white);
+}
+.table .td {
+  font-weight: 600;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="headerUser">
+  <header class="header">
+    <div class="header-title">
+      <span class="text" th:text=${title}></span>
+    </div>
+    <div class="header-content">
+      <button class="button-outline course-page-button">강의</button>
+      <button class="button-outline course-registration-page-button">수강 신청</button>
+      <button class="button-outline course-registration-cart-page-button">예비 수강 신청</button>
+      <button class="button course-registration-timetable-page-button">내 시간표</button>
+      <button class="button user-logout-button">로그아웃</button>
+    </div>
+  </header>
+</th:block>
+
+</html>

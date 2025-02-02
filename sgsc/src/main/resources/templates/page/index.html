@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>수강 신청 : 로그인</title>
+  <link th:href="@{/style/app.css}" rel="stylesheet">
+  <link th:href="@{/style/layout/header.css}" rel="stylesheet">
+  <link th:href="@{/style/page/index.css}" rel="stylesheet">
+<!--  <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js}"></script>-->
+  <script th:src="@{/script/plugin/axios-1.6.8.js}"></script>
+  <script th:src="@{/script/app.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/api.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/index.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/header :: header(title='수강 신청 (로그인)')}"/>
+  <div class="content">
+    <!-- 사용자 로그인 -->
+    <div class="user-login">
+      <div class="user-login-title">
+        <span class="title-text">
+          수강 신청 로그인
+        </span>
+        <div class="user-login-guide">
+          <span class="text">
+            본인의 <span class="text-essential">학번</span>, <span class="text-essential">비밀번호</span>를 입력하세요.
+          </span>
+        </div>
+      </div>
+      <div class="user-login-content">
+        <form class="form">
+          <div class="form-field">
+            <label class="form-field-label">
+              <input class="input user-number" type="text" placeholder="학번" value="20000000">
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="form-field-label">
+              <input class="input user-password" type="password" placeholder="비밀번호">
+            </label>
+          </div>
+          <div class="form-button">
+            <button class="button user-login-button" type="button">로그인</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 사용자 로그인 정보 -->
+    <div class="user-course-registration-info">
+      <span class="title-text">
+        수강 신청 안내
+      </span>
+      <div class="info-content">
+        <p class="text">- <span class="text-essential">강의</span> 화면에서 개설된 강의를 확인할 수 있습니다.</p>
+        <p class="text">- <span class="text-essential">수강 신청</span> 화면에서 희망하는 강의를 신청할 수 있습니다.</p>
+        <p class="text">- <span class="text-essential">예비 수강 신청</span> 화면에서 희망하는 강의를 장바구니에 담을 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="user-course-registration-timetable-info">
+      <span class="title-text">
+        수강 신청 시간표 안내
+      </span>
+      <div class="info-content">
+        <p class="text">- <span class="text-essential">내 시간표</span> 화면에서 최종 신청된 강의를 확인할 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

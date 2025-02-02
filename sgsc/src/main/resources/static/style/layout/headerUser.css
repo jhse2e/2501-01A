@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px 10px 16px;
+  border-bottom: 1px solid var(--gray-300);
+}
+.header-title {
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.header-title .text {
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 4px 4px var(--gray-300);
+}
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}

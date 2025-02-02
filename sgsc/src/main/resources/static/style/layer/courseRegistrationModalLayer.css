@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.03);
+}
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 45%;
+  width: 400px;
+  height: 250px;
+  padding: 25px 20px 25px 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  transform: translateY(-50%);
+}
+.modal-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-title .course-registration-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+.course-registration-title-text {
+  color: var(--primary-700);
+}
+.modal-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-content .course-registration-timer {
+}
+.modal-content .course-registration-time {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.course-registration-time-minute {
+  margin: 0 4px 0 8px;
+  font-size: 22px;
+}
+.course-registration-time-second {
+  margin: 0 4px 0 8px;
+  font-size: 22px;
+}
+.modal-content .course-registration-progress {
+  width: 100%;
+  height: 18px;
+  background: var(--gray-100);
+}
+.modal-content .course-registration-progress-gauge {
+  width: 0;
+  height: 18px;
+  background: var(--primary-700);
+}
+.modal-bottom {
+  width: 100%;
+}
+.modal-bottom .course-registration-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 15px 10px;
+  border: 6px;
+  background: var(--gray-100);
+  gap: 2px;
+}
+.course-registration-counter span {
+  font-size: 14px;
+}
+.modal-bottom .course-registration-count {
+  font-size: 22px;
+  font-weight: 600;
+}
+.course-registration-guide {
+  margin: 5px 0 0 0;
+  color: var(--primary-700);
+  font-weight: 700;
+}

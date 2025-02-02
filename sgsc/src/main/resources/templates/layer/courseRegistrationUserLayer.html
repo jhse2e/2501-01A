@@ -1,0 +1,26 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 수강 신청 사용자 영역 -->
+<th:block th:fragment="courseRegistrationUserLayer">
+  <div class="course-registration-user-details">
+    <div class="course-registration-user-details-title">
+      <span class="course-registration-user-details-title-text">사용자 정보</span>
+    </div>
+    <div class="course-registration-user-details-content">
+      <table class="table course-registration-user-table">
+        <thead class="thead course-registration-user-table-header">
+        <tr class="tr">
+          <th class="th">학번</th>
+          <th class="th">이름</th>
+          <th class="th">신청학점</th>
+          <th class="th">신청제한학점</th>
+          <th class="th">잔여신청학점</th>
+        </tr>
+        </thead>
+        <tbody class="tbody course-registration-user-table-content"></tbody>
+      </table>
+    </div>
+  </div>
+</th:block>
+
+</html>
